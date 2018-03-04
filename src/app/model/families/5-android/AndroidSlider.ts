@@ -1,8 +1,12 @@
 import { ISlider } from "../../ISlider";
 
-export class AndroidSlider implements ISlider{
-    size: number;
-    color: string;
-    backgroundText: string;
-    
+export class AndroidSlider implements ISlider {
+
+    constructor(
+        public size: number,
+        public color: string,
+        public backgroundText: string) {
+
+    }
+
 }

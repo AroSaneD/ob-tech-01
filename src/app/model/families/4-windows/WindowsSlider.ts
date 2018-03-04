@@ -5,4 +5,9 @@ export class WindowsSlider implements ISlider{
     color: string;
     backgroundText: string;
 
+    constructor(color: string, bgtext: string){
+        this.color = color;
+        this.backgroundText = bgtext;
+    }
+
 }
