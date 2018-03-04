@@ -1,8 +1,12 @@
 import { IButton } from "../../IButton";
 
 export class AndroidButton implements IButton{
-    text: string;
-    size: number;
-    color: string;
+    
+    constructor(
+        public text: string,
+        public size: number,
+        public color: string) {
+            console.log("Constructing the android button");
+    }
 
 }

@@ -6,7 +6,7 @@ export class OSXButton implements IButton{
     color: string;
 
     constructor(){
-        
+        console.log("Constructing the osx button");
     }
 
 }
