@@ -4,10 +4,15 @@ import { IButton } from '../IButton';
 import { SimpleFactory } from './SimpleFactory';
 import { ClassFactory } from './ClassFactory';
 import { ObjectFactory } from './ObjectFactory';
+import { ISlider } from '../ISlider';
 
 export abstract class AFactory {
 
-    // getButton(): IButton{
+    // getButton(wtf): IButton{
+
+    // }
+
+    // getSlider(wtf): ISlider{
 
     // }
 
@@ -23,7 +28,6 @@ export abstract class AFactory {
                 return new CreatorFactory();
             default:
                 throw new Error("Unknown factory requested");
-
         }
     }
 
