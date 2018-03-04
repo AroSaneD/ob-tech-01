@@ -1,6 +1,6 @@
 import { ISlider } from "../../ISlider";
 
-export class SymbiaSlider implements ISlider{
+export class SymbianSlider implements ISlider{
     size: number;
     color: string;
     backgroundText: string;

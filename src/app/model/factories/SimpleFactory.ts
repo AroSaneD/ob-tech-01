@@ -16,5 +16,5 @@ export class SimpleFactory extends AFactory { // A.K.A. the OSX factory
     getSlider(): ISlider {
         return new OSXSlider();
     }
-    
+
 }

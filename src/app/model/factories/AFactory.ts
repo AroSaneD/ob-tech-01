@@ -8,13 +8,9 @@ import { ISlider } from '../ISlider';
 
 export abstract class AFactory {
 
-    // getButton(wtf): IButton{
+    abstract getButton(...args: any[]): IButton;
 
-    // }
-
-    // getSlider(wtf): ISlider{
-
-    // }
+    abstract getSlider(...args: any[]): ISlider;
 
     public static getFactory(type: FactoryType): AFactory {
         switch (type) {
