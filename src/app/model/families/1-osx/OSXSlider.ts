@@ -5,4 +5,7 @@ export class OSXSlider implements ISlider{
     color: string;
     backgroundText: number;
     
+    constructor(){
+        
+    }
 }

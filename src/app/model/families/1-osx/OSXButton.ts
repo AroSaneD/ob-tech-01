@@ -5,4 +5,8 @@ export class OSXButton implements IButton{
     size: number;
     color: string;
 
+    constructor(){
+        
+    }
+
 }
