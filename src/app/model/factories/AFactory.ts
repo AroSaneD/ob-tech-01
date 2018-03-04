@@ -6,6 +6,9 @@ import { ClassFactory } from './ClassFactory';
 import { ObjectFactory } from './ObjectFactory';
 import { ISlider } from '../ISlider';
 
+
+// todo: implement some higher level parametrization, as not have the checks hard coded in for all of the factories
+
 export abstract class AFactory {
 
     abstract getButton(...args: any[]): IButton;
