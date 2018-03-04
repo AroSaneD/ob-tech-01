@@ -6,6 +6,6 @@ export class OSXSlider implements ISlider{
     backgroundText: string;
     
     constructor(){
-
+        console.log("Constructing the osx slider");
     }
 }

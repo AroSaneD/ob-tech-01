@@ -7,6 +7,8 @@ export class SamsungSlider implements ISlider{
 
     constructor(size: number){
         this.size = size;
+
+        console.log("Constructing the samsung slider");
     }
     
 }

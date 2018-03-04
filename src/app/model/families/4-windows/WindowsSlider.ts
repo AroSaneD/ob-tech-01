@@ -8,6 +8,8 @@ export class WindowsSlider implements ISlider{
     constructor(color: string, bgtext: string){
         this.color = color;
         this.backgroundText = bgtext;
+
+        console.log("Constructing the windows slider");
     }
 
 }

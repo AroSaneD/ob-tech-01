@@ -7,6 +7,7 @@ export class SymbiaSlider implements ISlider{
 
     constructor(bgText: string){
         this.backgroundText = bgText;
+        console.log("Constructing the symbian slider");
     }
     
 }

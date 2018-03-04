@@ -6,7 +6,7 @@ export class AndroidSlider implements ISlider {
         public size: number,
         public color: string,
         public backgroundText: string) {
-
+            console.log("Constructing the android slider");
     }
 
 }
