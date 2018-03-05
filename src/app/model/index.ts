@@ -1,6 +1,7 @@
 import { AFactory } from "./factories/AFactory";
 import { FactoryType } from './factories/FactoryType';
 
+
 var factoryType = FactoryType.Simple;
 
 var factory = AFactory.getFactory(factoryType);
