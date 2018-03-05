@@ -21,7 +21,7 @@ export class ClassFactory extends AFactory { // A.K.A. the symbian and samsung f
             return new SamsungButton(args[0]);
         }
 
-        else if (typeof args[0] === 'string' || args[0] instanceof String) { // check if argument is a string
+        else if (typeof args[0] === 'string') { // check if argument is a string
             return new SymbianButton(args[0]);
         }
 
