@@ -12,4 +12,7 @@ export class WindowsSlider implements ISlider{
         console.log("Constructing the windows slider");
     }
 
+    clone(): WindowsSlider{
+        return new WindowsSlider(this.color, this.backgroundText);
+    }
 }
