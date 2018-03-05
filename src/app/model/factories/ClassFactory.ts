@@ -1,4 +1,4 @@
-import { AFactory } from "./AFactory";
+import { AUIFactory } from "./AFactory";
 
 import { ISlider } from './../ISlider';
 import { IButton } from './../IButton';
@@ -10,7 +10,7 @@ import { SamsungButton } from "../families/3-samsung/SamsungButton";
 import { SamsungSlider } from './../families/3-samsung/SamsungSlider';
 
 
-export class ClassFactory extends AFactory { // A.K.A. the symbian and samsung factory (prototype - class)
+export class ClassFactory extends AUIFactory { // A.K.A. the symbian and samsung factory (prototype - class)
 
     getButton(...args: any[]): IButton {
         if (args.length != 1) {

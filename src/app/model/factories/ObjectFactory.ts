@@ -1,4 +1,4 @@
-import { AFactory } from "./AFactory";
+import { AUIFactory } from "./AFactory";
 
 import { ISlider } from './../ISlider';
 import { IButton } from './../IButton';
@@ -9,7 +9,7 @@ import { WindowsButton } from '../families/4-windows/WindowsButton';
 
 // Todo: return clones
 
-export class ObjectFactory extends AFactory { // A.K.A. Windows and Android factory (cloning)
+export class ObjectFactory extends AUIFactory { // A.K.A. Windows and Android factory (cloning)
 
     winBtn = new WindowsButton("red", "click");
     andBtn = new AndroidButton("press", 12, "red");
@@ -60,6 +60,7 @@ export class ObjectFactory extends AFactory { // A.K.A. Windows and Android fact
 
 
     universalClone(o1): any{
+        // improve to support deep cloning
         var o2 = Object.create(Object.getPrototypeOf(o1));
         for(let p in o1){
             o2[p] = o2[1];

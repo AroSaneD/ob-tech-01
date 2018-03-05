@@ -1,10 +1,15 @@
-import { AFactory } from "./factories/AFactory";
 import { FactoryType } from './factories/FactoryType';
 
+import { AUIFactory } from "./factories/AFactory";
+import { FactoryRetriever } from './factories/FactoryRetriever';
 
-var factoryType = FactoryType.Simple;
+var factoryType = FactoryType.Creator;
+var factory = FactoryRetriever.getFactoryFromFamily(factoryType);
 
-var factory = AFactory.getFactory(factoryType);
+// extra parameters should be passed through the factory
+// concrete customizations are not needed here
+// the same types are always specified, but depending on the values change the output
 
-var btn = factory.getButton(); // no arguments - osx btn
-var slider = factory.getSlider("red");
+factory.getButton("red", 12, "text");
+// var btn = factory.getButton(); // no arguments - osx btn
+// var slider = factory.getSlider("red");

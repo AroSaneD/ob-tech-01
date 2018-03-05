@@ -3,7 +3,7 @@ import { AndroidButton } from './../families/5-android/AndroidButton';
 import { WindowsButton } from './../families/4-windows/WindowsButton';
 import { SymbianButton } from './../families/2-symbian/SymbianButton';
 import { OSXButton } from './../families/1-osx/OSXButton';
-import { AFactory } from "./AFactory";
+import { AUIFactory } from "./AFactory";
 import { SamsungButton } from '../families/3-samsung/SamsungButton';
 import { ISlider } from '../ISlider';
 import { OSXSlider } from '../families/1-osx/OSXSlider';
@@ -21,7 +21,7 @@ class CreatorConfig {
     doArgumentsMatch(...args: any[]): boolean {
         var match = true;
 
-        args.forEach((arg, i) => {
+        args[0].forEach((arg, i) => {
             if (typeof arg !== this.argumentTypes[i]) {
                 match = false;
             }
@@ -33,7 +33,7 @@ class CreatorConfig {
 }
 
 class ButtonSliderCreator {
-    config: CreatorConfig[] = [
+    buttonConfig: CreatorConfig[] = [
         new CreatorConfig([], () => new OSXButton()),
         new CreatorConfig(["string"], (args) => new SymbianButton(args[0])),
         new CreatorConfig(["number"], (args) => new SamsungButton(args[0])),
@@ -53,8 +53,8 @@ class ButtonSliderCreator {
         let obj: any;
 
         config.forEach(conf => {
-            if(conf.doArgumentsMatch(args) && obj == null){
-                obj = conf.create(args) as IButton;
+            if(conf.doArgumentsMatch(args[0]) && obj == null){
+                obj = conf.create(args[0]) as IButton;
             }
         });
 
@@ -63,7 +63,7 @@ class ButtonSliderCreator {
 
 
     tryGetMatchingButton(...args: any[]): IButton{
-        return this.tryGetMatchingObject(this.config, args) as IButton;
+        return this.tryGetMatchingObject(this.buttonConfig, args[0]) as IButton;
     }
 
     tryGetMatchingSlider(...args: any[]): ISlider{
@@ -73,7 +73,7 @@ class ButtonSliderCreator {
 }
 
 
-export class CreatorFactory extends AFactory {
+export class CreatorFactory extends AUIFactory {
 
     buttonCreator: ButtonSliderCreator = new ButtonSliderCreator();
 
