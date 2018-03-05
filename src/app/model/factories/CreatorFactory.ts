@@ -82,7 +82,7 @@ export class CreatorFactory extends AFactory {
     }
 
     getSlider(...args: any[]): ISlider {
-        throw new Error("Method not implemented.");
+        return this.buttonCreator.tryGetMatchingSlider(args);
     }
 
 }
